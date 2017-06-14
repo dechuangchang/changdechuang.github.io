@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        #time{
+            text-align: center;
+            line-height: 90vh;
+            font-size: 20px;
+            color: rgba(229, 249, 126, 0.79);
+        }
+    </style>
 </head>
 <body>
-    陈大傻
+    <div id='time'></div>
 </body>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript">
+    
+    
+    setInterval(function(){
+        $('#time').html(moment().format("YYYY-MM-DD HH:mm:ss"))
+    },100);
+</script>
 </html>
