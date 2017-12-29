@@ -123,8 +123,16 @@
 
     }
     var timer = null;
+    var num = 0;
     timer = setInterval(function(){
-        forUser(user)
+        num++
+        if(num<=4){
+            forUser(user)
+
+        }else{
+            clearInterval(timer)
+        }
+        
     },5000)
 
 
