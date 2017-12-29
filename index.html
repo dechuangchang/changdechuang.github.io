@@ -64,6 +64,7 @@
             }
         },8000)
         aj();
+        // time()
         function aj(){
             $.ajax({
                 type: "GET",
@@ -115,66 +116,68 @@
             });
         }
         
-        setTimeout(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://chat.jiaxianghua.org/svc/common",
-                data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
-                success: function(msg){
-                    console.log(msg)
-                }
-            });
-        },1000)
-        setTimeout(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://chat.jiaxianghua.org/svc/common",
-                data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
-                success: function(msg){
-                    console.log(msg)
-                }
-            });
-        },2000)
-        setTimeout(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://chat.jiaxianghua.org/svc/common",
-                data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
-                success: function(msg){
-                    console.log(msg)
-                }
-            });
-        },3000)
-        setTimeout(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://chat.jiaxianghua.org/svc/common",
-                data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
-                success: function(msg){
-                    console.log(msg)
-                }
-            });
-        },4000)
-        setTimeout(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://chat.jiaxianghua.org/svc/common",
-                data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
-                success: function(msg){
-                    console.log(msg)
-                }
-            });
-        },5000)
-        setTimeout(function(){
-            $.ajax({
-                type: "GET",
-                url: "http://chat.jiaxianghua.org/svc/common",
-                data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
-                success: function(msg){
-                    console.log(msg)
-                }
-            });
-        },6000)
+        function time(){
+            setTimeout(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://chat.jiaxianghua.org/svc/common",
+                    data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+                    success: function(msg){
+                        console.log(msg)
+                    }
+                });
+            },1000)
+            setTimeout(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://chat.jiaxianghua.org/svc/common",
+                    data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+                    success: function(msg){
+                        console.log(msg)
+                    }
+                });
+            },2000)
+            setTimeout(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://chat.jiaxianghua.org/svc/common",
+                    data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+                    success: function(msg){
+                        console.log(msg)
+                    }
+                });
+            },3000)
+            setTimeout(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://chat.jiaxianghua.org/svc/common",
+                    data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+                    success: function(msg){
+                        console.log(msg)
+                    }
+                });
+            },4000)
+            setTimeout(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://chat.jiaxianghua.org/svc/common",
+                    data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+                    success: function(msg){
+                        console.log(msg)
+                    }
+                });
+            },5000)
+            setTimeout(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "http://chat.jiaxianghua.org/svc/common",
+                    data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+                    success: function(msg){
+                        console.log(msg)
+                    }
+                });
+            },6000)
+        }
         
 
     })
