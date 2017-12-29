@@ -54,9 +54,6 @@
         $.ajax({
             type: "POST",
             url: "http://chat.jiaxianghua.org/svc/common?type=poetryShow",
-            headers: {
-                "Referer":"http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT"
-            },
             data: "mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
             success: function(msg){
                 console.log(msg)
@@ -65,9 +62,6 @@
         $.ajax({
             type: "GET",
             url: "http://chat.jiaxianghua.org/svc/weixin",
-            headers: {
-                "Referer":"http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT"
-            },
             data: "type=getSignature&url=http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
             success: function(msg){
                 console.log(msg)
@@ -77,9 +71,6 @@
             $.ajax({
                 type: "GET",
                 url: "http://chat.jiaxianghua.org/svc/common",
-                headers: {
-                    "Referer":"http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT"
-                },
                 data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
                 success: function(msg){
                     console.log(msg)
@@ -91,9 +82,6 @@
         $.ajax({
             type: "POST",
             url: "http://chat.jiaxianghua.org/svc/common?type=poetryShow",
-            headers: {
-                "Referer":"http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho"
-            },
             data: "mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
             success: function(msg){
                 console.log(msg)
@@ -102,9 +90,6 @@
         $.ajax({
             type: "GET",
             url: "http://chat.jiaxianghua.org/svc/weixin",
-            headers: {
-                "Referer":"http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho"
-            },
             data: "type=getSignature&url=http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
             success: function(msg){
                 console.log(msg)
@@ -114,9 +99,6 @@
             $.ajax({
                 type: "GET",
                 url: "http://chat.jiaxianghua.org/svc/common",
-                headers: {
-                    "Referer":"http://chat.jiaxianghua.org/poetry-show.html?type=share&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho"
-                },
                 data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
                 success: function(msg){
                     console.log(msg)
