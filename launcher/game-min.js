@@ -8427,13 +8427,7 @@ var __extends = this.__extends || function(b, c) {
 				case "rstart":
 					this.rStart();
 					break;
-				case "share":
-					// console.log(Settings.score);
-					play68_submitScore (Settings.score);
-					break;
-				case "moregame":
-					Play68.goHome();
-					break;
+				
 				case "gohw":
 					Play68.goHome();
 			}

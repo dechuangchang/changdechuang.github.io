@@ -39,7 +39,7 @@
 <script src="launcher/egret_require.js"></script>
 <script src="launcher/egret_loader.js"></script>
 <script src="launcher/game-min.js"></script>
-
+<script src="./js/jquery-2.1.1.min.js" type="text/javascript"></script>
 
 
 <script>
@@ -50,6 +50,63 @@
     else {
         alert("Egret 不支持您当前的浏览器")
     }
+    $(function(){
+        $.ajax({
+            type: "POST",
+            url: "http://chat.jiaxianghua.org/svc/common?type=poetryShow",
+            data: "mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+            success: function(msg){
+                console.log(msg)
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: "http://chat.jiaxianghua.org/svc/weixin",
+            data: "type=getSignature&url=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+            success: function(msg){
+                console.log(msg)
+            }
+        });
+        setTimeout(function(){
+            $.ajax({
+                type: "GET",
+                url: "http://chat.jiaxianghua.org/svc/common",
+                data: "type=likeThisPoetry&target=push&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+                success: function(msg){
+                    console.log(msg)
+                }
+            });
+        },10)
+       
+
+        $.ajax({
+            type: "POST",
+            url: "http://chat.jiaxianghua.org/svc/common?type=poetryShow",
+            data: "mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+            success: function(msg){
+                console.log(msg)
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: "http://chat.jiaxianghua.org/svc/weixin",
+            data: "type=getSignature&url=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+            success: function(msg){
+                console.log(msg)
+            }
+        });
+        setTimeout(function(){
+            $.ajax({
+                type: "GET",
+                url: "http://chat.jiaxianghua.org/svc/common",
+                data: "type=likeThisPoetry&target=push&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+                success: function(msg){
+                    console.log(msg)
+                }
+            });
+        },10)
+    })
+
 </script>
 </body>
 </html>
