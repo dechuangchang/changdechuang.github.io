@@ -75,6 +75,14 @@
                 }
             });
             $.ajax({
+                type: "GET",
+                url: "http://chat.jiaxianghua.org/svc/media/convertion?",
+                data: "type=poetryAudio&mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
+                success: function(msg){
+                    console.log(msg)
+                }
+            });
+            $.ajax({
                 type: "POST",
                 url: "http://chat.jiaxianghua.org/svc/common?type=poetryShow",
                 data: "mediaid=j170zcWV93Em-1-zZVRcIK3stmKa0lRTLEKx-DZ7uq9TVEuWImb-q2KXKxoBvluT",
@@ -94,6 +102,14 @@
                 type: "GET",
                 url: "http://chat.jiaxianghua.org/poetry-show.html",
                 data: "type=share&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
+                success: function(msg){
+                    console.log(msg)
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: "http://chat.jiaxianghua.org/svc/media/convertion?",
+                data: "type=poetryAudio&mediaid=GaGABfy38kUyDKa9ZBstu3b34c-sr0ylcCsEAUikLE_JtGL2-AD1Q0X8QwMnOtho",
                 success: function(msg){
                     console.log(msg)
                 }
