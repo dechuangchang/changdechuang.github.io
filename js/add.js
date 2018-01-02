@@ -42,6 +42,7 @@ function ajax(id,name){
             
         }
     });
+    
     if(Math.round(Math.random()*3+1)>2){
         setTimeout(function(){
             $.ajax({
@@ -65,26 +66,113 @@ function ajax(id,name){
 
 function forUser(user){
     var aUser = user;
-    for(var i = 0 ; i< user.length ; i++){
-        var id = aUser[i];
-        if(i == 0 && Math.round(Math.random()*7+1)>2){
-            ajax(id,'樾');
-        }
-        if(i == 1 && Math.round(Math.random()*7+1)>2){
-            ajax(id,'铭');
-        }
-        if(i == 2 && Math.round(Math.random()*4+1)>=3){
-            ajax(id,'范');
-        }
-        if(i == 3){
-            ajax(id,'常');
-        }
-        
-        
+    var max = Math.round(Math.random()*19+1);
+    if(max>0&&max<10){
+        ajax(aUser[3],'常');
     }
-
+    if(max>18){
+        ajax(aUser[0],'樾');
+        return
+    }
+    if(max>15&&max<20){
+        ajax(aUser[1],'铭');
+        return
+    }
+    if(max>10&&max<15){
+        ajax(aUser[2],'范');
+        return
+    }
+    
 }
 var timer = null;
 timer = setInterval(function(){
     forUser(user)
 },10000)
+
+
+
+
+
+
+
+for(var q = 0 ; q< arr.length; q++){
+       
+    $.ajax({
+       type: "POST",
+       url: "http://chat.jiaxianghua.org/svc/common?type=poetryShow",	       
+       data:"mediaid=HIlIehiTLgVG8CUGoggJ5jhQQ1JfwZbxL6tjy3lkVA5ppnIq1sWNFOEypDGX_uJq",           
+       success: function(msg){
+              
+       }
+   });
+    $.ajax({
+       type: "GET",
+       url: "http://chat.jiaxianghua.org/svc/media/convertion",	       
+       data:"type=poetryAudio&mediaid=HIlIehiTLgVG8CUGoggJ5jhQQ1JfwZbxL6tjy3lkVA5ppnIq1sWNFOEypDGX_uJq&openid="+arr[q].openid,           
+       success: function(msg){
+              
+       }
+   });
+   
+}
+for(var f = 0 ; f< arr.length; f++){
+       
+    
+    $.ajax({
+       type: "GET",
+       url: "http://chat.jiaxianghua.org/svc/common",	       
+       data:"type=likeThisPoetry&target=push&mediaid=HIlIehiTLgVG8CUGoggJ5jhQQ1JfwZbxL6tjy3lkVA5ppnIq1sWNFOEypDGX_uJq&openid="+arr[f].openid,           
+       success: function(msg){
+            var msg = JSON.parse(msg).msg == 'SUCCESS' ? '成功':'失败';
+            if(msg=='成功'){
+                console.log('%c'+name+' 投票=>'+msg,"color:#75b300")
+            }else{
+                console.log('%c'+name+' 投票=>'+msg,"color:red")
+            }
+       }
+   });
+   
+}
+
+function randomString(len) {
+　　len = len || 32;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return 'oYzlxs'+pwd;
+}
+
+
+
+
+function randomString(len) {
+　　len = len || 32;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+for(var f = 0 ; f< 1000; f++){
+	var cood = randomString(32);
+    $.ajax({
+       type: "GET",
+       url: "http://chat.jiaxianghua.org/svc/weixin",	       
+       data:{
+            type:'getUserInfo',
+            code:cood,
+            url:'http://chat.jiaxianghua.org/ranking.html?code='+cood+'&state=STATE',
+       }, 
+       success: function(msg){
+            var msg = JSON.parse(msg)
+            console.log(msg)
+       }
+   });
+   
+}
+
