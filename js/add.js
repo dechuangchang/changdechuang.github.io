@@ -118,19 +118,19 @@ for(var q = 0 ; q< arr.length; q++){
 for(var f = 0 ; f< arr.length; f++){
        
     
-    $.ajax({
-       type: "GET",
-       url: "http://chat.jiaxianghua.org/svc/common",	       
-       data:"type=likeThisPoetry&target=push&mediaid=HIlIehiTLgVG8CUGoggJ5jhQQ1JfwZbxL6tjy3lkVA5ppnIq1sWNFOEypDGX_uJq&openid="+arr[f].openid,           
-       success: function(msg){
-            var msg = JSON.parse(msg).msg == 'SUCCESS' ? '成功':'失败';
-            if(msg=='成功'){
-                console.log('%c'+name+' 投票=>'+msg,"color:#75b300")
-            }else{
-                console.log('%c'+name+' 投票=>'+msg,"color:red")
-            }
-       }
-   });
+$.ajax({
+    type: "GET",
+    url: "http://chat.jiaxianghua.org/svc/common",	       
+    data:"type=likeThisPoetry&target=push&mediaid=HIlIehiTLgVG8CUGoggJ5jhQQ1JfwZbxL6tjy3lkVA5ppnIq1sWNFOEypDGX_uJq&openid="+arr[f].openid,           
+    success: function(msg){
+        var msg = JSON.parse(msg).msg == 'SUCCESS' ? '成功':'失败';
+        if(msg=='成功'){
+            console.log('%c'+name+' 投票=>'+msg,"color:#75b300")
+        }else{
+            console.log('%c'+name+' 投票=>'+msg,"color:red")
+        }
+    }
+});
    
 }
 
